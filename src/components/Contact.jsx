@@ -55,8 +55,8 @@ function Contact() {
           icon: FaPhoneAlt,
           title: "Phone",
           content: (
-            <a href="tel:+250123456789" className="hover:underline text-blue-800">
-              +250 123 456 789
+            <a href="tel:+250788304297" className="hover:underline text-blue-800">
+              +250 788 304 297
             </a>
           ),
           iconColor: "text-green-600",
@@ -65,12 +65,12 @@ function Contact() {
           title: "WhatsApp",
           content: (
             <a
-              href="https://wa.me/250987654321"
+              href="https://wa.me/+250788304297"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline text-blue-800"
             >
-              +250 987 654 321
+              +250 788 304 297
             </a>
           ),
           iconColor: "text-green-500",

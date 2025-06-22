@@ -22,7 +22,7 @@ const team = [
   {
     name: "Alice U.",
     role: "Land Surveyor",
-    photo: "/team/alice.jpg",
+    photo: "/team/Alice.jpg",
     background:
       "Alice specializes in land measurement, boundary mapping, and geospatial analysis, ensuring precision and compliance with local land regulations.",
     email: "alice.u@example.com",
@@ -31,7 +31,7 @@ const team = [
   {
     name: "Ian K.",
     role: "Quantity Surveyor",
-    photo: "/team/ian.jpg",
+    photo: "/team/Ian.jpg",
     background:
       "Ian brings financial expertise to construction, handling cost estimation, tendering, and project budgeting with accuracy and foresight.",
     email: "ian.k@example.com",
@@ -40,7 +40,7 @@ const team = [
   {
     name: "Teta A.",
     role: "Field Technician",
-    photo: "/team/teta.jpg",
+    photo: "/team/Teta.jpg",
     background:
       "Teta supports field operations with technical expertise in site assessments, measurements, and real-time data collection on construction sites.",
     email: "teta.a@example.com",
@@ -58,7 +58,7 @@ const team = [
   {
     name: "Olivier M.",
     role: "Software Engineer",
-    photo: "/team/olivier.jpg",
+    photo: "/team/Olivier.jpg",
     background:
       "Olivier designs and maintains software solutions for property management, integrating modern tech into real estate and engineering services.",
     email: "olmusabe@gmail.com",

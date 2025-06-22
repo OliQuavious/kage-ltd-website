@@ -186,8 +186,8 @@ function Contact() {
               />
               <ContactDetail
                 icon={<FiPhone size={28} />}
-                text="+250 123 456 789"
-                link="tel:+250123456789"
+                text=" +250 788 304 297"
+                link="tel:+250788304297"
               />
               <ContactDetail
                 icon={<FiMessageSquare size={28} />}
