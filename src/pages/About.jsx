@@ -77,39 +77,34 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About Us – KAGE Ltd</title>
-        <meta
-          name="description"
-          content="Learn more about KAGE Ltd's experienced team of valuers, engineers, and surveyors delivering top-tier property and engineering services across Rwanda."
-        />
-        <meta name="author" content="KAGE Ltd" />
-        <link rel="canonical" href="https://kageltd.rw/about" />
+  <title>About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda</title>
+  <meta
+    name="description"
+    content="Discover KAGE Ltd's mission, experienced team of certified valuers, land surveyors, and engineers providing property valuation and infrastructure consulting services across Rwanda."
+  />
+  <meta name="author" content="KAGE Ltd" />
+  <link rel="canonical" href="https://kage.rw/about" />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="About Us – KAGE Ltd" />
-        <meta
-          property="og:description"
-          content="Learn more about KAGE Ltd's experienced team of valuers, engineers, and surveyors delivering top-tier property and engineering services across Rwanda."
-        />
-        <meta property="og:url" content="https://kageltd.rw/about" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://kageltd.rw/images/about-og-image.jpg"
-        />
+  {/* Open Graph / Facebook */}
+  <meta property="og:title" content="About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda" />
+  <meta
+    property="og:description"
+    content="Meet the professionals behind KAGE Ltd – a multidisciplinary team delivering high-quality property valuation, surveying, engineering, and geotechnical services throughout Rwanda."
+  />
+  <meta property="og:url" content="https://kage.rw/about" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://kage.rw/images/about-og-image.jpg" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us – KAGE Ltd" />
-        <meta
-          name="twitter:description"
-          content="Learn more about KAGE Ltd's experienced team of valuers, engineers, and surveyors delivering top-tier property and engineering services across Rwanda."
-        />
-        <meta
-          name="twitter:image"
-          content="https://kageltd.rw/images/about-og-image.jpg"
-        />
-      </Helmet>
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda" />
+  <meta
+    name="twitter:description"
+    content="Explore the team and vision behind KAGE Ltd, a leading Rwandan firm in property valuation, land surveying, engineering, and construction supervision."
+  />
+  <meta name="twitter:image" content="https://kage.rw/images/about-og-image.jpg" />
+</Helmet>
+
 
       <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 py-10 sm:py-20 space-y-24 rounded-none sm:rounded-3xl shadow-none sm:shadow-2xl bg-gradient-to-br from-white to-blue-100 relative overflow-hidden">
 

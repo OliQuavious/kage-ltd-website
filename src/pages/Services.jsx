@@ -95,39 +95,34 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>Our Services – KAGE Ltd</title>
-        <meta
-          name="description"
-          content="Explore KAGE Ltd’s professional services including property valuation, architectural designs, engineering, construction supervision, land surveying, and geotechnical investigations."
-        />
-        <meta name="author" content="KAGE Ltd" />
-        <link rel="canonical" href="https://kageltd.rw/services" />
+  <title>Our Services – Property Valuation, Surveying & Engineering | KAGE Ltd Rwanda</title>
+  <meta
+    name="description"
+    content="Discover KAGE Ltd’s range of professional services including property valuation, land surveying, architectural and engineering design, construction supervision, and geotechnical soil investigations in Rwanda."
+  />
+  <meta name="author" content="KAGE Ltd" />
+  <link rel="canonical" href="https://kage.rw/services" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Our Services – KAGE Ltd" />
-        <meta
-          property="og:description"
-          content="Explore KAGE Ltd’s professional services including property valuation, architectural designs, engineering, construction supervision, land surveying, and geotechnical investigations."
-        />
-        <meta property="og:url" content="https://kageltd.rw/services" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://kageltd.rw/images/services-og-image.jpg"
-        />
+  {/* Open Graph */}
+  <meta property="og:title" content="Our Services – Property Valuation, Surveying & Engineering | KAGE Ltd Rwanda" />
+  <meta
+    property="og:description"
+    content="KAGE Ltd offers expert services in property valuation, land surveying, architectural and structural engineering, construction project supervision, and geotechnical investigations across Rwanda."
+  />
+  <meta property="og:url" content="https://kage.rw/services" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://kage.rw/images/services-og-image.jpg" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Our Services – KAGE Ltd" />
-        <meta
-          name="twitter:description"
-          content="Explore KAGE Ltd’s professional services including property valuation, architectural designs, engineering, construction supervision, land surveying, and geotechnical investigations."
-        />
-        <meta
-          name="twitter:image"
-          content="https://kageltd.rw/images/services-og-image.jpg"
-        />
-      </Helmet>
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Services – Property Valuation, Surveying & Engineering | KAGE Ltd Rwanda" />
+  <meta
+    name="twitter:description"
+    content="Explore professional services offered by KAGE Ltd in Rwanda: property valuation, engineering designs, land surveys, geotechnical testing, and construction supervision."
+  />
+  <meta name="twitter:image" content="https://kage.rw/images/services-og-image.jpg" />
+</Helmet>
+
 
       <section className="relative h-[400px] md:h-[500px] overflow-hidden">
         {/* Background image */}

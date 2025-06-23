@@ -86,39 +86,34 @@ function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us – KAGE Ltd</title>
-        <meta
-          name="description"
-          content="Get in touch with KAGE Ltd for inquiries, project discussions, or support. We’re here to help with all your real estate and engineering needs."
-        />
-        <meta name="author" content="KAGE Ltd" />
-        <link rel="canonical" href="https://kageltd.rw/contact" />
+  <title>Contact KAGE Ltd – Property Valuation & Surveying Experts in Rwanda</title>
+  <meta
+    name="description"
+    content="Contact KAGE Ltd for property valuation, land surveying, engineering design, or project consultations. Our team is ready to assist clients across Rwanda and beyond."
+  />
+  <meta name="author" content="KAGE Ltd" />
+  <link rel="canonical" href="https://kage.rw/contact" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Contact Us – KAGE Ltd" />
-        <meta
-          property="og:description"
-          content="Get in touch with KAGE Ltd for inquiries, project discussions, or support. We’re here to help with all your real estate and engineering needs."
-        />
-        <meta property="og:url" content="https://kageltd.rw/contact" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://kageltd.rw/images/contact-og-image.jpg"
-        />
+  {/* Open Graph */}
+  <meta property="og:title" content="Contact KAGE Ltd – Property Valuation & Surveying Experts in Rwanda" />
+  <meta
+    property="og:description"
+    content="Reach out to KAGE Ltd for expert assistance with property valuation, engineering design, land surveying, and geotechnical services in Rwanda."
+  />
+  <meta property="og:url" content="https://kage.rw/contact" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://kage.rw/images/contact-og-image.jpg" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us – KAGE Ltd" />
-        <meta
-          name="twitter:description"
-          content="Get in touch with KAGE Ltd for inquiries, project discussions, or support. We’re here to help with all your real estate and engineering needs."
-        />
-        <meta
-          name="twitter:image"
-          content="https://kageltd.rw/images/contact-og-image.jpg"
-        />
-      </Helmet>
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact KAGE Ltd – Property Valuation & Surveying Experts in Rwanda" />
+  <meta
+    name="twitter:description"
+    content="Get in touch with KAGE Ltd for expert consultation in property valuation, surveying, and engineering services across Rwanda."
+  />
+  <meta name="twitter:image" content="https://kage.rw/images/contact-og-image.jpg" />
+</Helmet>
+
 
       <section className="rounded-lg shadow-lg overflow-hidden">
         {/* Hero Image with Styled Breadcrumb on Top */}

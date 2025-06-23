@@ -60,7 +60,7 @@ function BlogLandSurveying() {
           content="Discover the top 5 benefits of land surveying including legal protection, construction accuracy, property value assessment, land subdivision, and peace of mind. Learn how KAGE Ltd helps property owners and developers across Rwanda."
         />
         <meta name="author" content="KAGE Ltd" />
-        <link rel="canonical" href="https://kageltd.rw/blog/benefits-of-land-surveying" />
+        <link rel="canonical" href="https://kage.rw/blog/benefits-of-land-surveying" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Top 5 Benefits of Land Surveying – KAGE Ltd" />
@@ -69,8 +69,8 @@ function BlogLandSurveying() {
           content="Land surveying ensures legal clarity, construction precision, and adds value to property. Explore its importance with KAGE Ltd experts."
         />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://kageltd.rw/blog/benefits-of-land-surveying" />
-        <meta property="og:image" content="https://kageltd.rw/blog/land-surveying.jpg" />
+        <meta property="og:url" content="https://kage.rw/blog/benefits-of-land-surveying" />
+        <meta property="og:image" content="https://kage.rw/blog/land-surveying.jpg" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -79,7 +79,7 @@ function BlogLandSurveying() {
           name="twitter:description"
           content="Discover how land surveying can protect your investment, improve accuracy, and support development goals. Provided by KAGE Ltd."
         />
-        <meta name="twitter:image" content="https://kageltd.rw/blog/land-surveying.jpg" />
+        <meta name="twitter:image" content="https://kage.rw/blog/land-surveying.jpg" />
       </Helmet>
 
       {/* Hero Section */}
