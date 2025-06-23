@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Properties from "./pages/Properties";
 import BlogLandSurveying from "./pages/BlogLandSurveying";
 import ModernArchitecture2025 from "./pages/ModernArchitecture2025";
+import TeamMember from './pages/TeamMember';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/properties" element={<Properties />} />
             <Route path="/blog/benefits-of-land-surveying" element={<BlogLandSurveying />} />
             <Route path="/blog/modern-architecture-2025" element={<ModernArchitecture2025 />} />
+            <Route path="/team-member/:id" element={<TeamMember />} />
 
             
 

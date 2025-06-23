@@ -1,70 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { HiChevronRight, HiMail, HiPhone } from "react-icons/hi";
 
 import {
-  FaUsers,
-  FaHome,
-} from "react-icons/fa";
+  HiChevronRight,
+  HiMail,
+  HiPhone,
+  HiChevronDown,
+  HiChevronUp,
+} from "react-icons/hi";
+import { FaUsers, FaHome } from "react-icons/fa";
 
-const team = [
-  {
-    name: "Eng. Gentil KANGAHO",
-    role: "Certified Valuer",
-    photo: "/team/Gentil.png",
-    background:
-      "Eng. Gentil is a seasoned Civil Engineer with over 20 years of experience in construction, including roads and buildings. He has held top management roles, notably as General Manager of Real Contractors Ltd, where he significantly boosted the company’s turnover. He also led the startup of East African Granite Industries Ltd and worked as a Senior Engineer at Rwanda Development Bank. Gentil is a Certified Property Valuer, an accredited Arbitrator (CIArb, London), and a certified Adjudicator (KLRCA, Malaysia). He holds a Bachelor's Degree in Civil Engineering from Bharathiar University, India.",
-    email: "gkangaho@gmail.com",
-    phone: "+250 788 304 297"
-  },
-  {
-    name: "Alice U.",
-    role: "Land Surveyor",
-    photo: "/team/Alice.jpg",
-    background:
-      "Alice specializes in land measurement, boundary mapping, and geospatial analysis, ensuring precision and compliance with local land regulations.",
-    email: "alice.u@example.com",
-    phone: "+250 788 111 002"
-  },
-  {
-    name: "Ian K.",
-    role: "Quantity Surveyor",
-    photo: "/team/Ian.jpg",
-    background:
-      "Ian brings financial expertise to construction, handling cost estimation, tendering, and project budgeting with accuracy and foresight.",
-    email: "ian.k@example.com",
-    phone: "+250 781 111 111"
-  },
-  {
-    name: "Teta A.",
-    role: "Field Technician",
-    photo: "/team/Teta.jpg",
-    background:
-      "Teta supports field operations with technical expertise in site assessments, measurements, and real-time data collection on construction sites.",
-    email: "teta.a@example.com",
-    phone: "+250 780 000 000"
-  },
-  {
-    name: "Ryan S.",
-    role: "Assistant Valuer (Civil Engineer)",
-    photo: "/team/sangwa.jpg",
-    background:
-      "Ryan combines his civil engineering background with valuation practices to deliver precise assessments of buildings and infrastructure.",
-    email: "ryan.s@gmail.com",
-    phone: "+250 793 904 633"
-  },
-  {
-    name: "Olivier M.",
-    role: "Software Engineer",
-    photo: "/team/Olivier.jpg",
-    background:
-      "Olivier designs and maintains software solutions for property management, integrating modern tech into real estate and engineering services.",
-    email: "olmusabe@gmail.com",
-    phone: "+250 791 302 741"
-  }
-];
+import team from "../data/Team";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -72,42 +20,60 @@ const fadeUp = {
 };
 
 function About() {
-  const [selectedMember, setSelectedMember] = useState(null);
+ const [expandedIndex, setExpandedIndex] = useState(null);
+
+const toggleExpand = (index) => {
+  setExpandedIndex(prevIndex => (prevIndex === index ? null : index));
+};
+
 
   return (
     <>
       <Helmet>
-  <title>About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda</title>
-  <meta
-    name="description"
-    content="Discover KAGE Ltd's mission, experienced team of certified valuers, land surveyors, and engineers providing property valuation and infrastructure consulting services across Rwanda."
-  />
-  <meta name="author" content="KAGE Ltd" />
-  <link rel="canonical" href="https://kage.rw/about" />
+        <title>
+          About KAGE Ltd – Trusted Property Valuers & Engineering Experts in
+          Rwanda
+        </title>
+        <meta
+          name="description"
+          content="Discover KAGE Ltd's mission, experienced team of certified valuers, land surveyors, and engineers providing property valuation and infrastructure consulting services across Rwanda."
+        />
+        <meta name="author" content="KAGE Ltd" />
+        <link rel="canonical" href="https://kage.rw/about" />
 
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda" />
-  <meta
-    property="og:description"
-    content="Meet the professionals behind KAGE Ltd – a multidisciplinary team delivering high-quality property valuation, surveying, engineering, and geotechnical services throughout Rwanda."
-  />
-  <meta property="og:url" content="https://kage.rw/about" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://kage.rw/images/about-og-image.jpg" />
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda"
+        />
+        <meta
+          property="og:description"
+          content="Meet the professionals behind KAGE Ltd – a multidisciplinary team delivering high-quality property valuation, surveying, engineering, and geotechnical services throughout Rwanda."
+        />
+        <meta property="og:url" content="https://kage.rw/about" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://kage.rw/images/about-og-image.jpg"
+        />
 
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda" />
-  <meta
-    name="twitter:description"
-    content="Explore the team and vision behind KAGE Ltd, a leading Rwandan firm in property valuation, land surveying, engineering, and construction supervision."
-  />
-  <meta name="twitter:image" content="https://kage.rw/images/about-og-image.jpg" />
-</Helmet>
-
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About KAGE Ltd – Trusted Property Valuers & Engineering Experts in Rwanda"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the team and vision behind KAGE Ltd, a leading Rwandan firm in property valuation, land surveying, engineering, and construction supervision."
+        />
+        <meta
+          name="twitter:image"
+          content="https://kage.rw/images/about-og-image.jpg"
+        />
+      </Helmet>
 
       <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 py-10 sm:py-20 space-y-24 rounded-none sm:rounded-3xl shadow-none sm:shadow-2xl bg-gradient-to-br from-white to-blue-100 relative overflow-hidden">
-
         {/* Hero Section */}
         <section className="relative h-[400px] md:h-[350px] mt-50 overflow-hidden">
           <motion.div
@@ -121,7 +87,10 @@ function About() {
             animate="show"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
-          <nav aria-label="Breadcrumb" className="relative z-20 mt-20 px-6 md:px-8">
+          <nav
+            aria-label="Breadcrumb"
+            className="relative z-20 mt-20 px-6 md:px-8"
+          >
             <ol className="flex flex-wrap sm:flex-nowrap items-center gap-2 text-sm px-4 py-2 rounded-full shadow-md w-fit max-w-full backdrop-blur-sm bg-white/10 ring-1 ring-white/20">
               <li className="flex items-center gap-1 shrink-0">
                 <Link
@@ -133,7 +102,10 @@ function About() {
                 </Link>
               </li>
               <HiChevronRight className="text-blue-400 text-lg shrink-0" />
-              <li aria-current="page" className="text-blue-200 font-semibold px-2 py-1 shrink-0">
+              <li
+                aria-current="page"
+                className="text-blue-200 font-semibold px-2 py-1 shrink-0"
+              >
                 About
               </li>
             </ol>
@@ -155,7 +127,8 @@ function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Delivering trusted property valuation & management with expertise and innovation.
+              Delivering trusted property valuation & management with expertise
+              and innovation.
             </motion.p>
           </div>
         </section>
@@ -189,7 +162,14 @@ function About() {
               Who&nbsp;We&nbsp;Are
             </h2>
             <p className="text-lg leading-relaxed text-gray-700">
-              <strong className="text-blue-700">KAGE Ltd</strong> is a multidisciplinary firm specializing in real estate and engineering services. We provide professional solutions including property valuation of movable and immovable assets, architectural and engineering designs, construction supervision, land surveying, and geotechnical soil investigations. Our goal is to deliver accurate, sustainable, and client-focused services across all sectors we serve.
+              <strong className="text-blue-700">KAGE Ltd</strong> is a
+              multidisciplinary firm specializing in real estate and engineering
+              services. We provide professional solutions including property
+              valuation of movable and immovable assets, architectural and
+              engineering designs, construction supervision, land surveying, and
+              geotechnical soil investigations. Our goal is to deliver accurate,
+              sustainable, and client-focused services across all sectors we
+              serve.
             </p>
           </motion.div>
           <motion.div
@@ -234,8 +214,9 @@ function About() {
                   Vision
                 </span>
                 <p className="text-lg md:text-xl leading-relaxed text-teal-900">
-                  Our vision is to be a leader in the property and engineering sectors, recognized
-                  for creativity, innovation, and unwavering commitment to client satisfaction.
+                  Our vision is to be a leader in the property and engineering
+                  sectors, recognized for creativity, innovation, and unwavering
+                  commitment to client satisfaction.
                 </p>
                 <p className="text-right text-5xl md:text-6xl font-[cursive] text-green-500/90 px-2 select-none">
                   Vision
@@ -272,8 +253,9 @@ function About() {
                 Mission
               </span>
               <p className="text-lg md:text-xl leading-relaxed text-blue-900">
-                Our mission is to deliver accurate, innovative, and reliable property and engineering
-                solutions, ensuring client satisfaction while fostering sustainable development.
+                Our mission is to deliver accurate, innovative, and reliable
+                property and engineering solutions, ensuring client satisfaction
+                while fostering sustainable development.
               </p>
               <p className="text-right text-5xl md:text-6xl font-[cursive] text-blue-700/90 px-2 select-none">
                 Mission
@@ -283,104 +265,112 @@ function About() {
         </motion.section>
 
         {/* Our Team Section */}
-        <motion.section
-          className="space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          variants={fadeUp}
+ <motion.section
+      id="team-section"
+      className="space-y-16 px-4 py-10 sm:py-16 bg-gradient-to-b from-white to-blue-50"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.5 }}
+    >
+      {/* Section Heading */}
+      <div className="text-center">
+        <motion.h2
+          className="text-4xl sm:text-5xl font-extrabold text-blue-900 mb-4"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold text-blue-800 flex items-center gap-3 border-l-8 border-blue-600 pl-5 hover:text-blue-600 transition duration-300">
-            <FaUsers className="text-blue-600" role="img" aria-label="Team Icon" /> Our Team
-          </h2>
-          <p className="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
-            Our multilingual team of <strong className="text-blue-700">experienced professionals</strong> combines
-            expertise in valuation, real estate management, and technology-driven assessment tools to deliver
-            outstanding results tailored to your needs.
-          </p>
-          <div className="relative max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                tabIndex={0}
-                onClick={() => setSelectedMember(member)}
-                className="relative p-6 rounded-3xl shadow-2xl bg-white/90 backdrop-blur-md
-                         border border-white/50 hover:shadow-blue-200 cursor-pointer group
-                         focus:outline-none focus:ring-4 focus:ring-blue-300"
-                whileHover={{ scale: 1.05, zIndex: 10 }}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 + index * 0.15, duration: 0.6 }}
-                style={{
-                  top: index % 2 === 0 ? 0 : 20,
-                  boxShadow: "0 15px 35px rgba(0, 100, 255, 0.15)",
-                }}
-              >
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-md"
-                  />
-                  <h3 className="text-xl font-semibold text-blue-900">{member.name}</h3>
-                  <p className="text-sm text-gray-600">{member.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          Meet Our Expert Team
+        </motion.h2>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          Dedicated professionals at <span className="text-blue-600 font-semibold">KAGE Ltd</span>, committed to delivering excellence in real estate, engineering, and valuation services.
+        </p>
+      </div>
 
-          {/* Modal */}
-          {selectedMember && (
+      {/* Team Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        {team.map((member, index) => {
+          const isLong = member.background.length > 10;
+          const isExpanded = expandedIndex === index;
+
+          return (
             <motion.div
-              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center px-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              key={index}
+              className="group bg-yellow-50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden border border-blue-100 hover:scale-[1.02]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
             >
-              <motion.div
-                className="bg-gradient-to-br from-blue-200 via-pink-100 to-rose-300 rounded-3xl w-full max-w-lg relative shadow-2xl border border-white/100 backdrop-blur-md max-h-[90vh] overflow-y-auto p-8"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <button
-                  onClick={() => setSelectedMember(null)}
-                  className="sticky top-4 right-4 text-blue-900 hover:text-red-500 text-2xl font-bold"
-                  aria-label="Close modal"
-                >
-                  &times;
-                </button>
-                <div className="flex flex-col items-center text-center gap-4 mt-4">
-                  <img
-                    src={selectedMember.photo}
-                    alt={selectedMember.name}
-                    className="w-28 h-28 rounded-full border-4 border-blue-100 shadow-lg object-cover"
-                  />
-                  <h3 className="text-2xl font-semibold text-blue-900">{selectedMember.name}</h3>
-                  <p className="text-sm text-gray-500 font-medium">{selectedMember.role}</p>
-                  <p className="text-gray-700 leading-relaxed text-base">{selectedMember.background}</p>
-                </div>
-                <div className="mt-4 flex flex-col lg:flex-row items-center justify-center gap-y-2 lg:gap-x-6 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <HiMail className="text-blue-700" />
-                    <a href={`mailto:${selectedMember.email}`} className="hover:underline">
-                      {selectedMember.email}
+              {/* Photo with overlay */}
+              <div className="relative overflow-hidden h-56">
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+
+              {/* Info */}
+              <div className="p-6 flex flex-col flex-grow space-y-3">
+                <h3 className="text-xl font-bold text-blue-900">{member.name}</h3>
+                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full w-fit">
+                  {member.role}
+                </span>
+
+                {/* Contact Info */}
+                <div className="space-y-2 text-sm text-blue-700">
+                  <div className="flex items-center gap-2 hover:text-blue-900 transition">
+                    <HiMail className="text-lg transition-transform group-hover:-translate-y-0.5" />
+                    <a href={`mailto:${member.email}`} className="hover:underline break-all">
+                      {member.email}
                     </a>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <HiPhone className="text-blue-700" />
-                    <a href={`tel:${selectedMember.phone}`} className="hover:underline">
-                      {selectedMember.phone}
+                  <div className="flex items-center gap-2 hover:text-blue-900 transition">
+                    <HiPhone className="text-lg transition-transform group-hover:-translate-y-0.5" />
+                    <a href={`tel:${member.phone}`} className="hover:underline">
+                      {member.phone}
                     </a>
                   </div>
                 </div>
-              </motion.div>
+
+                {/* Read More Toggle */}
+               {isLong && (
+  <Link
+  to={`/team-member/${member.id}`}
+  className="mt-2 inline-flex items-center gap-1 text-blue-600 text-sm font-medium hover:underline focus:outline-none"
+  aria-label={`Read more about ${member.name}`}
+>
+  Read more <HiChevronRight className="w-5 h-5" />
+</Link>
+)}
+
+                {/* Bio */}
+                {isExpanded && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-blue-50/50 rounded-lg p-4 mt-2 text-sm text-gray-700 whitespace-pre-line"
+                    id={`bio-content-${index}`}
+                    aria-live="polite"
+                  >
+                    {member.background}
+                  </motion.div>
+                )}
+              </div>
             </motion.div>
-          )}
-        </motion.section>
+          );
+        })}
+      </div>
+    </motion.section>
+
+
+
+
       </div>
     </>
   );
