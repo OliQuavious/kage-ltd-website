@@ -117,14 +117,15 @@ export default function ContactBanner() {
           ))}
         </div>
 
-        <motion.a
-          href="/contact"
-          className="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-2.5 shadow-md hover:bg-blue-100 transition text-sm whitespace-nowrap"
-          variants={itemVariants}
-          aria-label="Contact us now"
-        >
-          Contact Us
-        </motion.a>
+       <motion.a
+  href="/contact"
+  className="inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-blue-900 font-bold text-sm sm:text-base px-6 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-yellow-300"
+  variants={itemVariants}
+  aria-label="Contact us now"
+>
+  Contact Us
+</motion.a>
+
       </div>
     </motion.section>
   );
