@@ -74,7 +74,7 @@ export default function ContactBanner() {
     {
       icon: FaMapMarkerAlt,
       label: "Location",
-      value: <span> KG 596 St, Kacyiru, Rwanda</span>,
+      value: <span> KG 596 St 22, Kacyiru, Rwanda</span>,
       color: "text-white",
     },
   ];

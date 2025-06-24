@@ -310,20 +310,20 @@ function Services() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center text-white">
           {/* Contact Info */}
 <div>
-  <h2 className="text-4xl font-extrabold mb-6 drop-shadow-lg text-blue-900">
+  <h2 className="text-4xl font-extrabold mb-6 text-white drop-shadow-xl">
     Get in Touch
   </h2>
 
-  <p className="mb-8 text-lg max-w-lg text-blue-800 drop-shadow">
+  <p className="mb-8 text-lg max-w-lg text-gray-100 leading-relaxed drop-shadow">
     Have questions or need a consultation? Reach out to us and our expert team will get back to you promptly.
   </p>
 
-  <ul className="space-y-6 text-xl text-blue-900">
+  <ul className="space-y-6 text-lg text-white">
     {/* Location */}
     <li className="flex items-center gap-4 group transition-all duration-300">
       <HiLocationMarker className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
-      <span className="group-hover:text-yellow-500 transition-colors duration-300">
-        Kigali, Rwanda
+      <span className="group-hover:text-yellow-300 transition-colors duration-300">
+        KG 596 St, Kigali, Rwanda
       </span>
     </li>
 
@@ -332,7 +332,7 @@ function Services() {
       <HiPhone className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
       <a
         href="tel:+250788304297"
-        className="group-hover:text-yellow-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+        className="group-hover:text-yellow-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
       >
         +250 788 304 297
       </a>
@@ -343,13 +343,14 @@ function Services() {
       <HiMail className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
       <a
         href="mailto:info@kageltd.rw"
-        className="group-hover:text-yellow-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+        className="group-hover:text-yellow-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
       >
         info@kageltd.rw
       </a>
     </li>
   </ul>
 </div>
+
 
 
           {/* Contact Form */}
