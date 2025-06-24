@@ -297,7 +297,7 @@ const toggleExpand = (index) => {
           return (
             <motion.div
               key={index}
-              className="group bg-yellow-50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden border border-blue-100 hover:scale-[1.02]"
+              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden border border-blue-100 hover:scale-[1.02]"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
