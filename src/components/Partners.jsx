@@ -22,16 +22,25 @@ const cardVariants = {
 
 // Partner data with links
 const partners = [
-  { logo: "/logos/Kage ltd logos.png", url: "https://companya.com",  },
-  { logo: "/logos/Kage logo.jpg", url: "https://companyb.com",  },
-  { logo: "/logos/Wilo logo.png", url: "https://wilo.com",  },
+  { logo: "/logos/Kage ltd logos.png", url: "https://companya.com" },
+  { logo: "/logos/Kage logo.jpg", url: "https://companyb.com" },
+  { logo: "/logos/Wilo logo.png", url: "https://wilo.com" },
 ];
 
 function Partners() {
   return (
     <motion.section
       id="partners"
-      className="py-24 px-6 bg-gradient-to-b from-white via-slate-100 to-white flex flex-col items-center justify-center"
+      className="py-24 px-6 flex flex-col items-center justify-center bg-fixed bg-center bg-cover"
+      style={{
+        backgroundImage: `
+          url('/partner.jpg'),
+          linear-gradient(to bottom, #ffffff, #f1f5f9, #ffffff)
+        `,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundPosition: "center, center",
+        backgroundSize: "auto, cover",
+      }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
