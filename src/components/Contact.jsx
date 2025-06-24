@@ -118,7 +118,7 @@ export default function ContactBanner() {
         </div>
 
         <motion.a
-          href="#contact-form"
+          href="/contact"
           className="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-2.5 shadow-md hover:bg-blue-100 transition text-sm whitespace-nowrap"
           variants={itemVariants}
           aria-label="Contact us now"
