@@ -8,7 +8,8 @@ const testimonials = [
   {
     name: "Ian K.",
     title: "Real Estate Owner",
-    quote: "KAGE Ltd gave me peace of mind managing my property while I focused on other ventures.",
+    quote:
+      "KAGE Ltd gave me peace of mind managing my property while I focused on other ventures.",
     avatar: "/ian.jpg",
   },
   {
@@ -45,7 +46,14 @@ function Testimonials() {
   return (
     <section
       className="relative py-24 px-4 bg-fixed bg-center bg-cover"
-      style={{ backgroundImage: "url('/images/testimonials-bg.jpg')" }}
+      style={{
+        backgroundImage: `
+          url('/pattern.jpg'),
+        `,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundPosition: "center, center",
+        backgroundSize: "auto, cover",
+      }}
     >
       {/* Particle Background */}
       <Particles
