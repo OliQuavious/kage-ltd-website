@@ -162,39 +162,65 @@ function Contact() {
 
         {/* Contact Section */}
         <div className="max-w-6xl mx-auto bg-gradient-to-tr from-white via-blue-50 to-blue-100 p-6 md:p-16 grid md:grid-cols-3 gap-16 rounded-b-lg">
-          {/* Contact Info */}
-          <motion.div
-            className="space-y-10 text-center md:text-left text-blue-900"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-          >
-            <p className="text-lg font-medium">
-              Have questions or want to start a project? We’re ready to assist you.
-            </p>
+         {/* Contact Info */}
+{/* Contact Info */}
+<motion.div
+  className="space-y-10 text-center md:text-left text-blue-900"
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.7, delay: 0.3 }}
+>
+  <p className="text-xl sm:text-2xl font-semibold leading-relaxed text-blue-950">
+    Have questions or want to start a project?{" "}
+    <span className="text-blue-700">We’re here to help you every step of the way.</span>
+  </p>
 
-            <div className="space-y-8">
-              <ContactDetail
-                icon={<FiMail size={28} />}
-                text="info@kageltd.com"
-                link="mailto:info@kageltd.com"
-              />
-              <ContactDetail
-                icon={<FiPhone size={28} />}
-                text=" +250 788 304 297"
-                link="tel:+250788304297"
-              />
-              <ContactDetail
-                icon={<FiMessageSquare size={28} />}
-                text="WhatsApp +250 788 304 297"
-                link="https://wa.me/+250788304297"
-              />
-              <div className="flex items-center gap-4 justify-center md:justify-start">
-                <FiMapPin size={28} />
-                <p className="text-lg font-semibold">Kigali, Rwanda</p>
-              </div>
-            </div>
-          </motion.div>
+  <div className="space-y-6">
+    {/* Email */}
+    <div className="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
+      <FiMail size={28} className="text-blue-700 group-hover:scale-110 transition-transform duration-300" />
+      <a
+        href="mailto:info@kageltd.com"
+        className="text-lg font-medium text-blue-900 group-hover:text-blue-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+      >
+        info@kageltd.com
+      </a>
+    </div>
+
+    {/* Phone */}
+    <div className="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
+      <FiPhone size={28} className="text-green-700 group-hover:scale-110 transition-transform duration-300" />
+      <a
+        href="tel:+250788304297"
+        className="text-lg font-medium text-blue-900 group-hover:text-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-600 rounded"
+      >
+        +250 788 304 297
+      </a>
+    </div>
+
+    {/* WhatsApp */}
+    <div className="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
+      <FiMessageSquare size={28} className="text-green-600 group-hover:scale-110 transition-transform duration-300" />
+      <a
+        href="https://wa.me/+250788304297"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-lg font-medium text-blue-900 group-hover:text-green-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+      >
+        WhatsApp +250 788 304 297
+      </a>
+    </div>
+
+    {/* Location */}
+    <div className="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
+      <FiMapPin size={28} className="text-red-600 group-hover:scale-110 transition-transform duration-300" />
+      <p className="text-lg font-semibold text-blue-900 group-hover:text-red-600 transition-colors duration-300">
+        Kigali, Rwanda
+      </p>
+    </div>
+  </div>
+</motion.div>
+
 
           {/* Contact Form */}
           <motion.form
