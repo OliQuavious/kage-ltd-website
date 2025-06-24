@@ -47,13 +47,12 @@ function Testimonials() {
     <section
       className="relative py-24 px-4 bg-fixed bg-center bg-cover"
       style={{
-        backgroundImage: `
-          url('/pattern.jpg'),
-        `,
-        backgroundRepeat: "repeat, no-repeat",
-        backgroundPosition: "center, center",
-        backgroundSize: "auto, cover",
-      }}
+  backgroundImage: `url('/pattern.jpg')`,
+  backgroundRepeat: "repeat",
+  backgroundPosition: "center",
+  backgroundSize: "auto",
+}}
+
     >
       {/* Particle Background */}
       <Particles
