@@ -38,6 +38,12 @@ export default function WhyChooseUs() {
   return (
     <motion.section
       className="relative py-20 px-6 sm:px-10 bg-white border-t border-blue-100"
+      style={{
+        backgroundImage: "url('/pattern.jpg')",
+        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+        backgroundSize: "auto",
+      }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -47,7 +53,11 @@ export default function WhyChooseUs() {
         visible: { opacity: 1, y: 0 },
       }}
     >
-      <div className="max-w-7xl mx-auto text-center mb-14">
+      {/* Overlay to soften the pattern for readability */}
+      <div className="absolute inset-0 bg-white bg-opacity-80 pointer-events-none"></div>
+
+      {/* Content container, relative to be above overlay */}
+      <div className="relative max-w-7xl mx-auto text-center mb-14">
         <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
           Why Choose KAGE Ltd
         </h2>
@@ -56,7 +66,7 @@ export default function WhyChooseUs() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div className="relative grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {features.map((feature, index) => (
           <motion.div
             key={index}
