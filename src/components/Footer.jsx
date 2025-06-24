@@ -65,7 +65,7 @@ function Footer() {
               label: "LinkedIn",
             }, {
               icon: FaEnvelope,
-              href: "mailto:info@kageltd.com",
+              href: "mailto:info@kageltd.rw",
               label: "Email",
             }].map(({ icon: Icon, href, label }) => (
               <a
@@ -78,7 +78,7 @@ function Footer() {
               </a>
             ))}
           </div>
-          <p className="text-gray-300 mb-1 font-medium">Email: <a href="mailto:info@kageltd.com" className="hover:text-yellow-400 transition">info@kageltd.com</a></p>
+          <p className="text-gray-300 mb-1 font-medium">Email: <a href="mailto:info@kageltd.rw" className="hover:text-yellow-400 transition">info@kageltd.rw</a></p>
           <p className="text-gray-300 font-medium">Phone: <a href="tel:+250788304297" className="hover:text-yellow-400 transition">+250 788 304 297</a></p>
         </div>
       </div>

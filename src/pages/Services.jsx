@@ -309,31 +309,48 @@ function Services() {
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center text-white">
           {/* Contact Info */}
-          <div>
-            <h2 className="text-4xl font-extrabold mb-6 drop-shadow-lg">Get in Touch</h2>
-            <p className="mb-8 text-lg max-w-lg drop-shadow">
-              Have questions or need a consultation? Reach out to us and our expert team will get back to you promptly.
-            </p>
+<div>
+  <h2 className="text-4xl font-extrabold mb-6 drop-shadow-lg text-blue-900">
+    Get in Touch
+  </h2>
 
-            <ul className="space-y-6 text-xl">
-              <li className="flex items-center gap-4 hover:text-yellow-400 transition">
-                <HiLocationMarker className="w-8 h-8 text-yellow-400 flex-shrink-0" />
-                <span>Kigali, Rwanda</span>
-              </li>
-              <li className="flex items-center gap-4 hover:text-yellow-400 transition">
-                <HiPhone className="w-8 h-8 text-yellow-400 flex-shrink-0" />
-                <a href="tel:+250123456789" className="underline">
-                  +250 123 456 789
-                </a>
-              </li>
-              <li className="flex items-center gap-4 hover:text-yellow-400 transition">
-                <HiMail className="w-8 h-8 text-yellow-400 flex-shrink-0" />
-                <a href="mailto:contact@kage.rw" className="underline">
-                  contact@kage.rw
-                </a>
-              </li>
-            </ul>
-          </div>
+  <p className="mb-8 text-lg max-w-lg text-blue-800 drop-shadow">
+    Have questions or need a consultation? Reach out to us and our expert team will get back to you promptly.
+  </p>
+
+  <ul className="space-y-6 text-xl text-blue-900">
+    {/* Location */}
+    <li className="flex items-center gap-4 group transition-all duration-300">
+      <HiLocationMarker className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
+      <span className="group-hover:text-yellow-500 transition-colors duration-300">
+        Kigali, Rwanda
+      </span>
+    </li>
+
+    {/* Phone */}
+    <li className="flex items-center gap-4 group transition-all duration-300">
+      <HiPhone className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
+      <a
+        href="tel:+250788304297"
+        className="group-hover:text-yellow-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+      >
+        +250 788 304 297
+      </a>
+    </li>
+
+    {/* Email */}
+    <li className="flex items-center gap-4 group transition-all duration-300">
+      <HiMail className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
+      <a
+        href="mailto:info@kageltd.rw"
+        className="group-hover:text-yellow-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+      >
+        info@kageltd.rw
+      </a>
+    </li>
+  </ul>
+</div>
+
 
           {/* Contact Form */}
           <form

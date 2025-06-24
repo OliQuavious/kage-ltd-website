@@ -180,10 +180,10 @@ function Contact() {
     <div className="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
       <FiMail size={28} className="text-blue-700 group-hover:scale-110 transition-transform duration-300" />
       <a
-        href="mailto:info@kageltd.com"
+        href="mailto:info@kageltd.rw"
         className="text-lg font-medium text-blue-900 group-hover:text-blue-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
       >
-        info@kageltd.com
+        info@kageltd.rw
       </a>
     </div>
 

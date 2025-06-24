@@ -32,11 +32,11 @@ export default function ContactBanner() {
       label: "Email",
       value: (
         <a
-          href="mailto:info@kageltd.com"
+          href="mailto:info@kageltd.rw"
           className="text-white transition-colors duration-300 hover:text-white/90 focus:outline-none focus:ring-2 focus:ring-white rounded"
-          aria-label="Email info@kageltd.com"
+          aria-label="Email info@kageltd.rw"
         >
-          info@kageltd.com
+          info@kageltd.rw
         </a>
       ),
       color: "text-white",
@@ -74,7 +74,7 @@ export default function ContactBanner() {
     {
       icon: FaMapMarkerAlt,
       label: "Location",
-      value: <span>Kigali, Rwanda</span>,
+      value: <span> KG 596 St, Kacyiru, Rwanda</span>,
       color: "text-white",
     },
   ];
