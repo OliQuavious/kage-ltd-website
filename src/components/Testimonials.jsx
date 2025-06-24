@@ -47,7 +47,7 @@ function Testimonials() {
     <section
       className="relative py-24 px-4 bg-fixed bg-center bg-cover"
       style={{
-  backgroundImage: `url('/pattern.jpg')`,
+  backgroundImage: `url('/pattern2.jpg')`,
   backgroundRepeat: "repeat",
   backgroundPosition: "center",
   backgroundSize: "auto",
