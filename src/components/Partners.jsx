@@ -31,7 +31,7 @@ function Partners() {
   return (
     <motion.section
       id="partners"
-      className="py-24 px-6 flex flex-col items-center justify-center bg-fixed bg-center bg-cover"
+      className="py-20 px-6 flex flex-col items-center justify-center bg-fixed bg-center bg-cover"
       style={{
         backgroundImage: `
           url('/partner.jpg'),
@@ -39,7 +39,8 @@ function Partners() {
         `,
         backgroundRepeat: "repeat, no-repeat",
         backgroundPosition: "center, center",
-        backgroundSize: "auto, cover",
+        backgroundSize: "1000px, cover"
+
       }}
       initial="hidden"
       whileInView="visible"
