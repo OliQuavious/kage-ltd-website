@@ -1,102 +1,131 @@
-import React from "react";
+import React from "react"; 
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 },
-  },
-};
-
-const cardVariants = {
+const bannerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 90, damping: 14 },
+    transition: { staggerChildren: 0.2, delayChildren: 0.3 },
   },
 };
 
-function Contact() {
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 110, damping: 15 },
+  },
+};
+
+export default function ContactBanner() {
+  const contactInfo = [
+    {
+      icon: FaEnvelope,
+      label: "Email",
+      value: (
+        <a
+          href="mailto:info@kageltd.com"
+          className="text-white transition-colors duration-300 hover:text-white/90 focus:outline-none focus:ring-2 focus:ring-white rounded"
+          aria-label="Email info@kageltd.com"
+        >
+          info@kageltd.com
+        </a>
+      ),
+      color: "text-white",
+    },
+    {
+      icon: FaPhoneAlt,
+      label: "Call",
+      value: (
+        <a
+          href="tel:+250788304297"
+          className="text-white transition-colors duration-300 hover:text-white/90 focus:outline-none focus:ring-2 focus:ring-white rounded"
+          aria-label="Call +250 788 304 297"
+        >
+          +250 788 304 297
+        </a>
+      ),
+      color: "text-white",
+    },
+    {
+      icon: FaWhatsapp,
+      label: "WhatsApp",
+      value: (
+        <a
+          href="https://wa.me/+250788304297"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white transition-colors duration-300 hover:text-white/90 focus:outline-none focus:ring-2 focus:ring-white rounded"
+          aria-label="WhatsApp +250 788 304 297"
+        >
+          +250 788 304 297
+        </a>
+      ),
+      color: "text-white",
+    },
+    {
+      icon: FaMapMarkerAlt,
+      label: "Location",
+      value: <span>Kigali, Rwanda</span>,
+      color: "text-white",
+    },
+  ];
+
   return (
     <motion.section
       id="contact"
-      className="relative py-20 px-8 max-w-4xl mx-auto rounded-xl bg-gradient-to-br from-white to-blue-50 shadow-2xl overflow-hidden"
+      className="w-full bg-gradient-to-r from-blue-700 via-blue-900 to-indigo-900 py-12 px-6 sm:px-12"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.4 }}
-      variants={containerVariants}
+      variants={bannerVariants}
+      aria-label="Contact Banner"
     >
-      {/* Decorative background shape */}
-      <div className="absolute -top-20 -right-20 w-72 h-72 bg-yellow-200 rounded-full opacity-30 filter blur-3xl pointer-events-none"></div>
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-8">
+        <motion.h2
+          className="text-white text-3xl sm:text-4xl font-extrabold tracking-tight text-center sm:text-left flex-1"
+          variants={itemVariants}
+        >
+          Get In Touch With Us
+        </motion.h2>
 
-      <motion.h2
-        className="relative z-10 text-4xl font-extrabold text-blue-900 mb-12 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Get in Touch
-      </motion.h2>
-
-      <div className="relative z-10 grid gap-8 sm:grid-cols-2 text-left text-lg text-gray-700">
-        {[{
-          icon: FaEnvelope,
-          title: "Email",
-          content: (
-            <a href="mailto:info@kageltd.com" className="hover:underline text-blue-800">
-              info@kageltd.com
-            </a>
-          ),
-          iconColor: "text-blue-600",
-        }, {
-          icon: FaPhoneAlt,
-          title: "Phone",
-          content: (
-            <a href="tel:+250788304297" className="hover:underline text-blue-800">
-              +250 788 304 297
-            </a>
-          ),
-          iconColor: "text-green-600",
-        }, {
-          icon: FaWhatsapp,
-          title: "WhatsApp",
-          content: (
-            <a
-              href="https://wa.me/+250788304297"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline text-blue-800"
+        <div className="flex flex-wrap justify-center sm:justify-start gap-x-12 gap-y-4 flex-1 max-w-2xl">
+          {contactInfo.map(({ icon: Icon, label, value, color }) => (
+            <motion.div
+              key={label}
+              className="flex items-center gap-3 min-w-[200px]"
+              variants={itemVariants}
             >
-              +250 788 304 297
-            </a>
-          ),
-          iconColor: "text-green-500",
-        }, {
-          icon: FaMapMarkerAlt,
-          title: "Location",
-          content: <p>Kigali, Rwanda</p>,
-          iconColor: "text-red-500",
-        }].map(({ icon: Icon, title, content, iconColor }, i) => (
-          <motion.div
-            key={i}
-            className="flex items-center gap-5 bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-transparent hover:border-yellow-400 cursor-pointer"
-            variants={cardVariants}
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(251, 191, 36, 0.4)" }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Icon className={`${iconColor} text-3xl flex-shrink-0`} />
-            <div>
-              <h4 className="font-semibold text-blue-900 mb-1">{title}</h4>
-              <div>{content}</div>
-            </div>
-          </motion.div>
-        ))}
+              <Icon className={`${color} text-2xl`} aria-hidden="true" />
+              <div className="text-white">
+                <p className="text-xs uppercase tracking-wide opacity-70">
+                  {label}
+                </p>
+                <p className="font-semibold text-lg transform transition-transform duration-300 hover:scale-105">
+                  {value}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.a
+          href="#contact-form"
+          className="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-2.5 shadow-md hover:bg-blue-100 transition text-sm whitespace-nowrap"
+          variants={itemVariants}
+          aria-label="Contact us now"
+        >
+          Contact Us
+        </motion.a>
       </div>
     </motion.section>
   );
 }
-
-export default Contact;

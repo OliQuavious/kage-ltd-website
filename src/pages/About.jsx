@@ -133,62 +133,87 @@ const toggleExpand = (index) => {
           </div>
         </section>
 
-        {/* Who We Are Section */}
-        <motion.section
-          className="flex flex-col md:flex-row gap-12 items-center
-             bg-gradient-to-br from-white/90 via-blue-50/80 to-blue-100/60
-             backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-blue-100/60
-             relative overflow-hidden"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: { opacity: 1, y: 0 },
-          }}
+       {/* Who We Are Section */}
+<motion.section
+  className="relative overflow-hidden bg-white p-10 md:p-16 rounded-3xl shadow-2xl border border-blue-100 flex flex-col md:flex-row items-center gap-12"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  transition={{ duration: 0.7 }}
+  variants={{
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  }}
+>
+  {/* Subtle Background Accents */}
+  <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30 pointer-events-none" />
+  <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30 pointer-events-none" />
+
+  {/* Text Content */}
+  <motion.div
+    className="md:w-1/2 z-10 space-y-6"
+    initial={{ opacity: 0, x: -60 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-snug">
+      <span className="block h-2 w-10 bg-blue-600 rounded mb-4"></span>
+      Who We Are
+    </h2>
+   <p className="text-lg text-gray-700 leading-relaxed">
+  <strong className="text-blue-700 font-semibold">KAGE Ltd</strong> is a multidisciplinary firm delivering innovative and dependable real estate and engineering solutions. Backed by a team of highly skilled professionals, we blend technical precision with industry expertise to serve a wide range of client needs.
+</p>
+
+<ul className="mt-6 space-y-4 text-gray-700">
+  {[
+    "Comprehensive valuation of movable and immovable assets",
+    "Tailored architectural and engineering design services",
+    "End-to-end construction supervision and consulting",
+    "Precision land surveying and geotechnical investigations",
+  ].map((item, index) => (
+    <li key={index} className="flex items-start gap-3">
+      <span className="mt-1 text-blue-600">
+        <svg
+          className="w-4 h-4"
+          fill="currentColor"
+          viewBox="0 0 20 20"
         >
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
-          <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-100/30 rounded-full blur-3xl" />
-          <motion.div
-            className="md:w-1/2 space-y-6 z-10"
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-black text-blue-900 leading-tight flex items-center gap-3">
-              <span className="inline-block h-10 w-1 rounded bg-blue-600" />
-              Who&nbsp;We&nbsp;Are
-            </h2>
-            <p className="text-lg leading-relaxed text-gray-700">
-              <strong className="text-blue-700">KAGE Ltd</strong> is a
-              multidisciplinary firm specializing in real estate and engineering
-              services. We provide professional solutions including property
-              valuation of movable and immovable assets, architectural and
-              engineering designs, construction supervision, land surveying, and
-              geotechnical soil investigations. Our goal is to deliver accurate,
-              sustainable, and client-focused services across all sectors we
-              serve.
-            </p>
-          </motion.div>
-          <motion.div
-            className="md:w-1/2 flex justify-center z-10"
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            whileHover={{ scale: 1.03 }}
-          >
-            <img
-              src="/team/kage gif.gif"
-              alt="KAGE Ltd Services"
-              className="w-full max-w-md rounded-2xl shadow-xl
-                   ring-4 ring-blue-200/40 hover:ring-blue-400/60
-                   transition duration-300"
-            />
-          </motion.div>
-        </motion.section>
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 111.414-1.414L8.414 12.172l7.879-7.879a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </span>
+      <span>{item}</span>
+    </li>
+  ))}
+</ul>
+
+<p className="mt-6 text-lg text-gray-700 leading-relaxed">
+  At KAGE Ltd, we prioritize <strong className="text-blue-700">accuracy</strong>, <strong className="text-blue-700">integrity</strong>, and <strong className="text-blue-700">client satisfaction</strong>. Our solutions are designed to be sustainable, data-driven, and tailored to each project’s unique requirements.
+</p>
+
+  </motion.div>
+
+  {/* Image Section */}
+  <motion.div
+    className="md:w-1/2 flex justify-center z-10"
+    initial={{ opacity: 0, x: 60 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: 0.1 }}
+    whileHover={{ scale: 1.02 }}
+  >
+    <img
+      src="/team/kage gif.gif"
+      alt="KAGE Ltd Overview"
+      className="w-full max-w-md rounded-2xl  "
+    />
+  </motion.div>
+</motion.section>
+
 
         {/* Vision, Objectives & Mission Section */}
         <motion.section

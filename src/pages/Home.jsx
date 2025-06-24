@@ -7,6 +7,8 @@ import WhatsAppFloat from "../components/WhatsAppFloat";
 import Partners from "../components/Partners";
 import BlogPreviews from "../components/BlogPreviews";
 import { Helmet } from "react-helmet";
+import WhyChooseUs from "../components/WhyChooseUs";
+
 
 function Home() {
   return (
@@ -37,6 +39,7 @@ function Home() {
       </Helmet>
 
       <Hero />
+      <WhyChooseUs /> 
       <Services />
       <Approach />
       <BlogPreviews />
