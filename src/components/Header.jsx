@@ -30,7 +30,7 @@ function Header() {
 
   return (
     <motion.header
-      className={`fixed top-0 w-full z-50 backdrop-blur transition-all duration-300 text-white ${headerBgClass}`}
+      className={`fixed top-0 w-full z-50  transition-all duration-300 text-white ${headerBgClass}`}
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center flex-wrap">
         {/* Logo */}
