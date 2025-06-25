@@ -244,59 +244,74 @@ function Services() {
       </section>
 
       {/* ---------------- SERVICES GRID ---------------- */}
-      <motion.section
-        id="services"
-        className="py-20 px-6 max-w-7xl mx-auto"
-        variants={list}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-14">What We Do</h2>
+<motion.section
+  id="services"
+  className="relative py-20 px-6 bg-fixed bg-center bg-cover"
+  style={{
+    backgroundImage: `
+      url('/pattern1.jpg'),
+      linear-gradient(to bottom, #ffffff, #f8fafc, #ffffff)
+    `,
+    backgroundRepeat: "repeat, no-repeat",
+    backgroundPosition: "top left, center",
+    backgroundSize: "1300px, cover",
+  }}
+  variants={list}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.3 }}
+>
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-14">What We Do</h2>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ title, desc, icon: Icon }, idx) => (
-            <Link
-              to={`/services/${slugify(title)}`}
-              key={idx}
-              aria-label={`Read more about ${title}`}
-              className="no-underline"
+    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      {services.map(({ title, desc, icon: Icon }, idx) => (
+        <Link
+          to={`/services/${title.replace(/\s+/g, '-').toLowerCase()}`}
+          key={idx}
+          aria-label={`Read more about ${title}`}
+          className="no-underline"
+        >
+          <motion.div
+            variants={card}
+            whileHover={{
+              scale: 1.05,
+              y: -8,
+              boxShadow: "0 15px 25px rgba(251,191,36,0.4)",
+            }}
+            whileTap={{ scale: 0.97 }}
+            className="relative bg-white p-8 rounded-xl shadow-lg cursor-pointer"
+          >
+            {/* Decorative circle */}
+            <motion.div
+              className="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-yellow-100/60"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.05 * idx, type: "spring", stiffness: 90 }}
+            />
+
+            <motion.div
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              className="relative flex flex-col items-center text-center"
             >
               <motion.div
-                variants={card}
-                whileHover={{
-                  scale: 1.05,
-                  y: -8,
-                  boxShadow: "0 15px 25px rgba(251,191,36,0.4)",
-                }}
-                whileTap={{ scale: 0.97 }}
-                className="relative bg-white p-8 rounded-xl shadow-lg cursor-pointer"
+                variants={iconFx}
+                className="text-blue-900 text-5xl mb-5 drop-shadow-sm"
               >
-                {/* Decorative circle */}
-                <motion.div
-                  className="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-yellow-100/60"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.05 * idx, type: "spring", stiffness: 90 }}
-                />
-
-                <motion.div
-                  initial="rest"
-                  whileHover="hover"
-                  animate="rest"
-                  className="relative flex flex-col items-center text-center"
-                >
-                  <motion.div variants={iconFx} className="text-blue-900 text-5xl mb-5 drop-shadow-sm">
-                    <Icon />
-                  </motion.div>
-                  <h3 className="text-xl font-semibold text-blue-900 mb-3">{title}</h3>
-                  <p className="text-gray-700">{desc}</p>
-                </motion.div>
+                <Icon />
               </motion.div>
-            </Link>
-          ))}
-        </div>
-      </motion.section>
+              <h3 className="text-xl font-semibold text-blue-900 mb-3">{title}</h3>
+              <p className="text-gray-700">{desc}</p>
+            </motion.div>
+          </motion.div>
+        </Link>
+      ))}
+    </div>
+  </div>
+</motion.section>
+
 
       {/* ------------------ CONTACT SECTION ------------------ */}
       <motion.section
