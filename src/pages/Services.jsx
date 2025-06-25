@@ -320,12 +320,19 @@ function Services() {
 
   <ul className="space-y-6 text-lg text-white">
     {/* Location */}
-    <li className="flex items-center gap-4 group transition-all duration-300">
-      <HiLocationMarker className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
-      <span className="group-hover:text-yellow-300 transition-colors duration-300">
-        KG 596 St, Kigali, Rwanda
-      </span>
-    </li>
+     <a
+      href="https://www.google.com/maps?q=KG+596+St+21,+Kacyiru,+Rwanda"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <div className="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
+        <FiMapPin size={28} className="text-red-600 group-hover:scale-110 transition-transform duration-300" />
+        <p className="text-lg font-semibold text-blue-900 group-hover:text-red-600 transition-colors duration-300">
+          KG 596 St 21, Kacyiru, Rwanda
+        </p>
+      </div>
+    </a>
 
     {/* Phone */}
     <li className="flex items-center gap-4 group transition-all duration-300">
