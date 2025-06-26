@@ -366,7 +366,7 @@ const toggleExpand = (index) => {
                {isLong && (
   <Link
   to={`/team-member/${member.id}`}
-  className="mt-2 inline-flex items-center gap-1 text-blue-600 text-sm font-medium hover:underline focus:outline-none"
+  className="mt-2 inline-flex items-center gap-1 text-black text-sm font-medium hover:underline focus:outline-none"
   aria-label={`Read more about ${member.name}`}
 >
   Read more <HiChevronRight className="w-5 h-5" />
