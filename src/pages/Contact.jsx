@@ -213,7 +213,7 @@ function Contact() {
 
     {/* Location */}
    <a
-  href="https://www.google.com/maps?q=KG+596+St+21,+Kacyiru,+Rwanda"
+  href="https://www.google.com/maps?q=KG+596+St+20,+Kacyiru,+Rwanda"
   target="_blank"
   rel="noopener noreferrer"
   className="block"
