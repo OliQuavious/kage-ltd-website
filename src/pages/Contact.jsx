@@ -321,40 +321,19 @@ function Contact() {
             </motion.button>
           </motion.form>
         </div>
-       {/* Map with Logo Overlay */}
-<div className="relative mt-16 w-full h-[450px] rounded-lg overflow-hidden shadow-lg">
-  {/* Google Map iframe */}
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3281.413034209571!2d30.086715474967043!3d-1.9364203980460053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwNTYnMTEuMSJTIDMwwrAwNScyMS41IkU!5e1!3m2!1sen!2srw!4v1749807805982!5m2!1sen!2srw"
-    className="absolute top-0 left-0 w-full h-full"
-    style={{ border: 0 }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    title="KAGE Ltd Location"
-  ></iframe>
-
-  {/* Custom info box overlay */}
-  <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-4 z-10 w-72">
-    <img
-      src="/your-logo-path.png"
-      alt="KAGE Ltd"
-      className="h-10 mb-2"
-    />
-    <h3 className="text-lg font-semibold text-blue-900">KAGE Ltd</h3>
-    <p className="text-sm text-gray-700">KG 596 Ave, Kigali</p>
-
-    {/* Star rating */}
-    <div className="flex items-center mt-2">
-      <div className="flex text-yellow-500 text-sm">
-        ★★★★☆
-      </div>
-      <span className="ml-2 text-sm text-gray-600">4.8 (22 reviews)</span>
-    </div>
-  </div>
-</div>
-
-
+        {/* Map */}
+        <div className="mt-16 w-full h-[450px] rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3281.413034209571!2d30.086715474967043!3d-1.9364203980460053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwNTYnMTEuMSJTIDMwwrAwNScyMS41IkU!5e1!3m2!1sen!2srw!4v1749807805982!5m2!1sen!2srw"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="KAGE Ltd Location"
+          ></iframe>
+        </div>
       </section>
     </>
   );
