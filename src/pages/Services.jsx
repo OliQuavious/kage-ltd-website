@@ -316,7 +316,7 @@ function Services() {
       {/* ------------------ CONTACT SECTION ------------------ */}
       <motion.section
         id="contact"
-        className="bg-gradient-to-tr from-blue-900 to-blue-700 py-20 px-6 md:px-12"
+        className="bg-gradient-to-tr from-blue-900 to-blue-700 py-20 px-6 md:px-12 mb-14"
         variants={formVariants}
         initial="hidden"
         whileInView="show"
