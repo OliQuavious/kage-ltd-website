@@ -213,7 +213,7 @@ function Contact() {
 
     {/* Location */}
    <a
-  href="https://www.google.com/maps?q=KG+596+St+20,+Kacyiru,+Rwanda"
+  href="https://www.google.com/maps?q=KG+596+St+23,+Kacyiru,+Rwanda"
   target="_blank"
   rel="noopener noreferrer"
   className="block"
@@ -221,7 +221,7 @@ function Contact() {
   <div className="flex items-center gap-4 justify-center md:justify-start group transition-all duration-300">
     <FiMapPin size={28} className="text-red-600 group-hover:scale-110 transition-transform duration-300" />
     <p className="text-lg font-semibold text-blue-900 group-hover:text-red-600 transition-colors duration-300">
-      KG 596 St 21, Kacyiru, Rwanda
+      KG 596 St 23, Kacyiru, Rwanda
     </p>
   </div>
 </a>
