@@ -364,13 +364,15 @@ const toggleExpand = (index) => {
 
                 {/* Read More Toggle */}
                {isLong && (
-  <Link
+ <Link
   to={`/team-member/${member.id}`}
-  className="mt-2 inline-flex items-center gap-1 text-black text-sm font-medium hover:underline focus:outline-none"
+  className="mt-4 inline-flex items-center gap-2 text-blue-800 text-sm font-semibold transition-all duration-300 hover:text-blue-600 hover:translate-x-1 focus:outline-none group"
   aria-label={`Read more about ${member.name}`}
 >
-  Read more <HiChevronRight className="w-5 h-5" />
+  <span className="group-hover:underline">Read more</span>
+  <HiChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
 </Link>
+
 )}
 
                 {/* Bio */}
