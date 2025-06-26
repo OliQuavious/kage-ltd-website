@@ -321,19 +321,31 @@ function Contact() {
             </motion.button>
           </motion.form>
         </div>
-        {/* Map */}
-        <div className="mt-16 w-full h-[450px] rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3281.413034209571!2d30.086715474967043!3d-1.9364203980460053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwNTYnMTEuMSJTIDMwwrAwNScyMS41IkU!5e1!3m2!1sen!2srw!4v1749807805982!5m2!1sen!2srw"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="KAGE Ltd Location"
-          ></iframe>
-        </div>
+       {/* Map with Logo Overlay */}
+<div className="relative mt-16 w-full h-[450px] rounded-lg overflow-hidden shadow-lg">
+  {/* Google Map */}
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3281.413034209571!2d30.086715474967043!3d-1.9364203980460053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwNTYnMTEuMSJTIDMwwrAwNScyMS41IkU!5e1!3m2!1sen!2srw!4v1749807805982!5m2!1sen!2srw"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="KAGE Ltd Location"
+    className="absolute top-0 left-0 w-full h-full"
+  ></iframe>
+
+  {/* Logo overlay */}
+  <div className="absolute top-4 left-4 bg-white bg-opacity-80 p-2 rounded-md shadow-md z-10">
+    <img
+      src="/Newkagelogo.jpg"  // ← Replace this with your logo file path
+      alt="KAGE Ltd Logo"
+      className="h-12 w-auto"
+    />
+  </div>
+</div>
+
       </section>
     </>
   );
