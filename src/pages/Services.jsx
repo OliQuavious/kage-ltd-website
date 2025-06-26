@@ -338,7 +338,7 @@ function Services() {
     <li className="flex items-center gap-4 group transition-all duration-300">
       <HiLocationMarker className="w-8 h-8 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
       <span className="group-hover:text-yellow-300 transition-colors duration-300">
-        KG 596 St, Kigali, Rwanda
+        KG 596 St 19, Kacyiru, Rwanda
       </span>
     </li>
 
