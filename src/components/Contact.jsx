@@ -74,20 +74,20 @@ export default function ContactBanner() {
     {
       icon: FaMapMarkerAlt,
       label: "Location",
-      value: <span> KG 596 St 22, Kacyiru, Rwanda</span>,
+      value: <span> KG 596 St 19, Kacyiru, Rwanda</span>,
       color: "text-white",
     },
   ];
 
   return (
     <motion.section
-      id="contact"
-      className="w-full bg-gradient-to-r from-blue-700 via-blue-900 to-indigo-900 py-12 px-6 sm:px-12"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
-      variants={bannerVariants}
-      aria-label="Contact Banner"
+       id="contact"
+  className="w-full bg-gradient-to-r from-blue-700 via-blue-900 to-indigo-900 py-12 px-6 sm:px-12 mb-12"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.4 }}
+  variants={bannerVariants}
+  aria-label="Contact Banner"
     >
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-8">
         <motion.h2
