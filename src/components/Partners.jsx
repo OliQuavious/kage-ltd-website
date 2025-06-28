@@ -15,16 +15,14 @@ const titleVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-};
-
-// Partner data with links
+// Partner data
 const partners = [
   { logo: "/logos/Kage ltd logos.png", url: "https://companya.com" },
   { logo: "/logos/Kage logo.jpg", url: "https://companyb.com" },
   { logo: "/logos/Wilo logo.png", url: "https://wilo.com" },
+  { logo: "/logos/Kage logo.jpg", url: "https://companyb.com" },
+  { logo: "/logos/Wilo logo.png", url: "https://wilo.com" },
+  { logo: "/logos/Kage ltd logos.png", url: "https://companya.com" },
 ];
 
 function Partners() {
@@ -39,8 +37,7 @@ function Partners() {
         `,
         backgroundRepeat: "repeat, no-repeat",
         backgroundPosition: "center, center",
-        backgroundSize: "1000px, cover"
-
+        backgroundSize: "1000px, cover",
       }}
       initial="hidden"
       whileInView="visible"
@@ -60,34 +57,40 @@ function Partners() {
         />
       </motion.h2>
 
-      <div className="w-full max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 justify-items-center items-center">
-          {partners.map(({ logo, url, name }, i) => (
+      <div className="overflow-hidden w-full max-w-6xl">
+        <motion.div
+          className="flex gap-12 animate-scroll whitespace-nowrap"
+          style={{ animation: "scroll-left 30s linear infinite" }}
+        >
+          {partners.map(({ logo, url }, i) => (
             <motion.div
               key={i}
-              className={`bg-white p-6 rounded-2xl shadow-md grayscale hover:grayscale-0 
-                hover:shadow-yellow-300/40 transition duration-300 cursor-pointer 
-                flex items-center justify-center
-                ${i === 2 ? "col-span-2 sm:col-auto" : ""}`}
-              variants={cardVariants}
-              whileHover={{
-                scale: 1.06,
-                y: -6,
-              }}
+              className="bg-white p-4 rounded-2xl shadow-md grayscale hover:grayscale-0 hover:shadow-yellow-300/40 transition duration-300 flex items-center justify-center min-w-[160px]"
+              whileHover={{ scale: 1.06, y: -4 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 140 }}
             >
               <a href={url} target="_blank" rel="noopener noreferrer">
                 <img
                   src={logo}
-                  alt={`${name} Logo`}
-                  className="h-20 w-auto max-w-[160px] object-contain"
+                  alt="Partner Logo"
+                  className="h-16 w-auto object-contain"
                 />
               </a>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
+
+      {/* Keyframe animation for marquee scroll */}
+      <style>
+        {`
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}
+      </style>
     </motion.section>
   );
 }
