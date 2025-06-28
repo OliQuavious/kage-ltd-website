@@ -77,7 +77,7 @@ const toggleExpand = (index) => {
 <section className="relative w-full h-[400px] md:h-[350px] overflow-hidden">
   <motion.div
     className="absolute inset-0 w-full h-full bg-cover bg-center"
-    style={{ backgroundImage: "url('/team/About.png')" }}
+    style={{ backgroundImage: "url('/team/About.jpg')" }}
     variants={{
       hidden: { scale: 1 },
       show: { scale: 1.1, transition: { duration: 10, ease: "easeOut" } },
