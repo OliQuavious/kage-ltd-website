@@ -75,17 +75,19 @@ const toggleExpand = (index) => {
 
       <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 py-10 sm:py-20 space-y-24 rounded-none sm:rounded-3xl shadow-none sm:shadow-2xl bg-gradient-to-br from-white to-blue-100 relative overflow-hidden">
         {/* Hero Section */}
-        <section className="relative h-[400px] md:h-[350px] mt-50 overflow-hidden">
-          <motion.div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/team/Telephone.jpg')" }}
-            variants={{
-              hidden: { scale: 1 },
-              show: { scale: 1.1, transition: { duration: 10, ease: "easeOut" } },
-            }}
-            initial="hidden"
-            animate="show"
-          />
+       <section className="relative w-full h-[400px] md:h-[350px] overflow-hidden">
+  <motion.div
+    className="absolute inset-0 w-full h-full bg-cover bg-center"
+    style={{ backgroundImage: "url('/team/Telephone.jpg')" }}
+    variants={{
+      hidden: { scale: 1 },
+      show: { scale: 1.1, transition: { duration: 10, ease: "easeOut" } },
+    }}
+    initial="hidden"
+    animate="show"
+  />
+
+
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
           <nav
             aria-label="Breadcrumb"
