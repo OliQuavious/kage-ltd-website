@@ -246,16 +246,13 @@ function Services() {
       {/* ---------------- SERVICES GRID ---------------- */}
 <motion.section
   id="services"
-  className="relative py-20 px-6 bg-fixed bg-center bg-cover"
-  style={{
-    backgroundImage: `
-      url('/pattern1.jpg'),
-      linear-gradient(to bottom, #ffffff, #f8fafc, #ffffff)
-    `,
-    backgroundRepeat: "repeat, no-repeat",
-    backgroundPosition: "top left, center",
-    backgroundSize: "1300px, cover",
-  }}
+  className="py-16 px-4 sm:px-6 flex flex-col items-center justify-center bg-fixed bg-center bg-cover"
+      style={{
+       backgroundImage: "url('/pattern1.jpg')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
   variants={list}
   initial="hidden"
   whileInView="show"
