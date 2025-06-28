@@ -25,6 +25,9 @@ const partners = [
 ];
 
 function Partners() {
+  // Double the logos so the scroll loop looks seamless
+  const logos = [...partners, ...partners];
+
   return (
     <motion.section
       id="partners"
@@ -56,20 +59,12 @@ function Partners() {
         />
       </motion.h2>
 
-      <div className="w-full overflow-x-auto">
-        <motion.div
-          className="flex gap-6 sm:gap-12 px-2 sm:px-0 w-max animate-scroll whitespace-nowrap sm:animate-scroll"
-          style={{
-            animation: "scroll-left 30s linear infinite",
-          }}
-        >
-          {partners.map(({ logo, url }, i) => (
-            <motion.div
+      <div className="relative w-full overflow-hidden">
+        <div className="w-max flex gap-6 sm:gap-12 animate-scroll">
+          {logos.map(({ logo, url }, i) => (
+            <div
               key={i}
-              className="bg-white p-4 rounded-2xl shadow-md grayscale hover:grayscale-0 hover:shadow-yellow-300/40 transition duration-300 flex items-center justify-center min-w-[120px] sm:min-w-[160px]"
-              whileHover={{ scale: 1.06, y: -4 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 140 }}
+              className="bg-white p-4 rounded-2xl shadow-md grayscale hover:grayscale-0 hover:shadow-yellow-300/40 transition duration-300 flex items-center justify-center min-w-[140px] sm:min-w-[180px]"
             >
               <a href={url} target="_blank" rel="noopener noreferrer">
                 <img
@@ -78,22 +73,20 @@ function Partners() {
                   className="h-14 sm:h-16 w-auto object-contain"
                 />
               </a>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       <style>
         {`
-          @keyframes scroll-left {
+          @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
           }
 
-          @media (max-width: 640px) {
-            .animate-scroll {
-              animation: none !important;
-            }
+          .animate-scroll {
+            animation: scroll 40s linear infinite;
           }
         `}
       </style>
