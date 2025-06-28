@@ -12,7 +12,11 @@ const partners = [
   { logo: "/logos/Wilo logo.png", url: "https://wilo.com" },
   { logo: "/logos/Kage logo.jpg", url: "https://companyb.com" },
   { logo: "/logos/Wilo logo.png", url: "https://wilo.com" },
-  { logo: "/logos/Kage ltd logos.png", url: "https://companya.com" },
+  { logo: "/logos/Kage logo.jpg", url: "https://companyb.com" },
+  { logo: "/logos/Wilo logo.png", url: "https://wilo.com" },
+  { logo: "/logos/Kage logo.jpg", url: "https://companyb.com" },
+  { logo: "/logos/Wilo logo.png", url: "https://wilo.com" },
+  
 ];
 
 function Partners() {

@@ -79,7 +79,7 @@ export default function ModernArchitecture2025() {
         <TrendCard
           icon={<Users className="w-8 h-8 text-purple-600" />}
           title="Community-Centered Urban Design"
-          image="/blog/community-design.jpg"
+          image="/blog/architecture10.jpg"
           content="There's a strong shift toward inclusive spaces — parks, mixed-use zones, and pedestrian-first layouts to foster community well-being."
         />
       </div>
@@ -122,7 +122,7 @@ export default function ModernArchitecture2025() {
             className="rounded-lg shadow-md object-cover h-56 w-full"
           />
           <img
-            src="/blog/architecture2.jpg"
+            src="/blog/architecture20.webp"
             alt="Architecture Design 2"
             className="rounded-lg shadow-md object-cover h-56 w-full"
           />
